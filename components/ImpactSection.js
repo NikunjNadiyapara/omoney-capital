@@ -198,11 +198,11 @@ export default function ImpactSection() {
           }`}
         >
           <div className="inline-flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 backdrop-blur-md">
-            <div className="flex -space-x-2">
+            {/* <div className="flex -space-x-2">
               <div className="h-8 w-8 rounded-full border-2 border-white bg-linear-to-br from-blue-400 to-blue-600"></div>
               <div className="h-8 w-8 rounded-full border-2 border-white bg-linear-to-br from-green-400 to-green-600"></div>
               <div className="h-8 w-8 rounded-full border-2 border-white bg-linear-to-br from-purple-400 to-purple-600"></div>
-            </div>
+            </div> */}
             <span className="text-sm font-semibold text-white">
               Join 15,000+ Happy Investors Today
             </span>
