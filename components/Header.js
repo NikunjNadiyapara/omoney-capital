@@ -13,7 +13,7 @@ export default function Header() {
     { name: "About", href: "#about" },
     { name: "Calculators", href: "#financial-calculators" },
     { name: "Blogs", href: "#latest-blogs" },
-    { name: "Webinars", href: "##webinars" },
+    { name: "Webinars", href: "#webinars" },
     { name: "Videos", href: "#educational-videos" },
     { name: "Support", href: "#support" },
   ];
