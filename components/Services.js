@@ -8,9 +8,11 @@ import {
   FileText,
   Home,
 } from "lucide-react";
+import OpenDematAccountPopUp from "./OpenDematAccountPopUp";
 
 export default function ProductsServices() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isOpenAccountPopUp, setIsOpenAccountPopUp] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -181,13 +183,22 @@ export default function ProductsServices() {
           <p className="mb-6 text-gray-600">
             Ready to start your investment journey?
           </p>
-          <button className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-linear-to-r from-blue-600 to-blue-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <button
+            onClick={() => setIsOpenAccountPopUp(true)}
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-linear-to-r from-blue-600 to-blue-700 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
             <span className="relative z-10">Get Started Today</span>
             <TrendingUp className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             <div className="absolute inset-0 z-0 bg-linear-to-r from-blue-700 to-blue-800 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </button>
         </div>
       </div>
+      {isOpenAccountPopUp && (
+        <OpenDematAccountPopUp
+          open={isOpenAccountPopUp}
+          onClose={() => setIsOpenAccountPopUp(false)}
+        />
+      )}
     </section>
   );
 }

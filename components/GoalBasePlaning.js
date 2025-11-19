@@ -234,19 +234,22 @@ export default function GoalBasedPlanning() {
 
               {/* Buttons */}
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <button className="group relative overflow-hidden rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <button
+                  onClick={() => {
+                    // Redirect to WhatsApp chat with next window
+                    if (typeof window !== "undefined") {
+                      const whatsappUrl =
+                        "https://api.whatsapp.com/send?phone=9601290640&text=Hello,%20I%20need%20assistance%20with%20my%20investment.";
+                      window.open(whatsappUrl, "_blank");
+                    }
+                  }}
+                  className="group relative overflow-hidden rounded-xl bg-linear-to-r from-blue-600 to-blue-700 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                >
                   <span className="relative z-10 flex items-center gap-2">
                     Book Free Consultation
                     <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </span>
                   <div className="absolute inset-0 z-0 bg-linear-to-r from-blue-700 to-blue-800 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                </button>
-
-                <button className="group rounded-xl border-2 border-blue-600 bg-white px-8 py-4 font-semibold text-blue-600 transition-all duration-300 hover:scale-105 hover:bg-blue-50 hover:shadow-lg">
-                  <span className="flex items-center gap-2">
-                    Explore Goals
-                    <Sparkles className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-                  </span>
                 </button>
               </div>
 

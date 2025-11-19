@@ -170,7 +170,16 @@ export default function SupportSection() {
               {/* WhatsApp Button */}
               <button className="group relative inline-flex items-center gap-3 overflow-hidden rounded-xl bg-gradient-to-r from-green-500 to-green-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <MessageCircle className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-                <span className="relative z-10">Chat on WhatsApp</span>
+                <span className="relative z-10">
+                  {" "}
+                  <a
+                    href="https://api.whatsapp.com/send?phone=9601290640&text=Hello,%20I%20need%20assistance%20with%20my%20investment."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </span>
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 <div className="absolute inset-0 z-0 bg-linear-to-r from-green-600 to-green-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
               </button>

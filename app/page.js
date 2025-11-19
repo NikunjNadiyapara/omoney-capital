@@ -8,10 +8,12 @@ import HeroSection from "@/components/HeroSection";
 import ImpactSection from "@/components/ImpactSection";
 import ProductsServices from "@/components/Services";
 import SupportSection from "@/components/SupportSection";
+import Tinker from "@/components/Tinker";
 
 export default function Home() {
   return (
     <>
+      <Tinker />
       <Header />
       <div className="w-screen overflow-x-hidden">
         <main>
